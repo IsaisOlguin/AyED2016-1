@@ -1,18 +1,20 @@
 class TestOrdenamientosDirectos{
-  int []A;
-  int []B;
-  int []C;
-  int max;
+  static int []A;
+  static int []B;
+  static int []C;
+  static int max;
    
    public static void main(String []args){
       Ordenamientos ordena = new Ordenamientos();
       Inicializar();
+      Imprimir();
       GeneraNumeros();
+      ordena.Seleccion(B, max);
       Imprimir();
-      ordena.Intercambio(i);
-      ordena.Seleccion();
-      ordena.Insercion();
-      Imprimir();
+      ordena.Insercion(C, max);
+      System.out.print(A);
+      System.out.print(B);
+      System.out.print(C);
    }
    
    
@@ -21,14 +23,15 @@ class TestOrdenamientosDirectos{
       do{
       max=Teclado.LeeEntero("Numero de elementos:");
       }while(max<1);
-      A=B=C=new int[max];
+      A=new int[max];
    }
    
      
    public static void GeneraNumeros(){
       int i;
       for(i=0;i<A.length;i++)
-         A[i]=B[i]=C[i]=(int) (Math.random()*100) ;
+         A[i]=(int) (Math.random()*100) ;
+     
    }
    
     public static void Imprimir(){
@@ -37,9 +40,5 @@ class TestOrdenamientosDirectos{
       for(i=0;i<A.length;i++)
          System.out.println("["+i+"]="+ A[i]) ;
    }
-
-
-
-
 
 }
