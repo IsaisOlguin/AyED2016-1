@@ -13,7 +13,7 @@ class Ordenamientos{
       int i,j;
       for(i=0;i<indice;i++)
          for(j=i+1;j<=indice;j++)
-            if(A[i]>A[j])
+
                auxcambiaDatos(A,i,j);
       
       }
