@@ -1,11 +1,11 @@
-class ArregloEmpleado{
+class ArregloCliente{
 	//ATRIBUTOS
-	private Empleado []arreglo;
+	private Cliente []arreglo;
 	private int indice;
 	
 	//CONSRUCTORES
-	public ArregloEmpleado(int max){
-		arreglo = new Empleado[max];
+	public ArregloCliente(int max){
+		arreglo = new Cliente[max];
 		indice = -1;
 	}
 	
@@ -14,7 +14,7 @@ class ArregloEmpleado{
 		return (indice < arreglo.length-1);
 	}
 	
-	public void Insertar(Empleado dato) {
+	public void Insertar(Cliente dato) {
 		arreglo[++indice]=dato;
 	}
 
@@ -38,8 +38,8 @@ class ArregloEmpleado{
 	public void Actualizar(int pos) {
 		arreglo[pos].Actualizar();
 	}
-	public Empleado Borrar(int pos){
-		Empleado aux= arreglo[pos];
+	public Cliente Borrar(int pos){
+		Cliente aux= arreglo[pos];
 		arreglo[pos] = arreglo[indice];
 		indice--;
 		return aux;
